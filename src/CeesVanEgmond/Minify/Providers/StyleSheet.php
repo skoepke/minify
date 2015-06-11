@@ -80,14 +80,14 @@ class StyleSheet extends BaseProvider implements MinifyInterface
         $iGoDirBackCount = substr_count($sOutputDirDiff,'/');
 
 
-
         foreach ($urlsToModify as $value) {
 
-            return str_replace($value, str_repeat('../',$iGoDirBackCount).$sPathFromPublic.$value, $sToAppend);
+            $sToAppend = str_replace($value, str_repeat('../',$iGoDirBackCount).$sPathFromPublic.$value, $sToAppend);
 
         }
-    }
 
+        return $sToAppend;
+    }
 
     /**
      * @param $file
