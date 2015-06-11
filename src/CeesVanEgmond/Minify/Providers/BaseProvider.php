@@ -32,7 +32,7 @@ abstract class BaseProvider implements Countable
     /**
      * @var string
      */
-    private $publicPath;
+    protected $publicPath;
 
     /**
      * @param null $publicPath
